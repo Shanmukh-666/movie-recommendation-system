@@ -1,89 +1,68 @@
-# Movie Recommendation System
+# Customer Churn Prediction System
 
 ## Overview
 
-A Movie Recommendation System built using Machine Learning and Streamlit.
+A Customer Churn Prediction System built using Machine Learning and Streamlit.
 
-This project implements a content-based movie recommendation system that suggests similar movies based on genre information. The recommendation engine uses TF-IDF vectorization and cosine similarity to identify movies with similar characteristics and provides recommendations through an interactive Streamlit web application.
+This project implements a supervised learning-based churn prediction system that predicts whether a customer will stay or leave a telecom service based on demographic, account, and usage information. The prediction engine uses XGBoost classifier to identify customers likely to churn and provides predictions through an interactive Streamlit web application.
 
 ---
 
 ## Features
 
-- Select a movie
-- Get Top 5 recommendations
-- Content-based filtering
-- Interactive Streamlit interface
+- Predict whether a customer will stay or leave  
+- Get real-time churn prediction  
+- Machine learning-based classification  
+- Interactive Streamlit interface  
 
 ---
 
 ## Technologies Used
 
-- Python
-- Pandas
-- Scikit-Learn
-- Streamlit
+- Python  
+- Pandas  
+- Scikit-Learn  
+- XGBoost  
+- Streamlit  
 
 ---
 
 ## Machine Learning Techniques
 
-- TF-IDF Vectorization
-- Cosine Similarity
+- Data Preprocessing  
+- One-Hot Encoding  
+- Feature Engineering  
+- XGBoost Classifier  
+- Train-Test Split  
 
 ---
 
 ## Dataset
 
-MovieLens Small Dataset
+Telco Customer Churn Dataset
 
-https://grouplens.org/datasets/movielens/
+https://www.kaggle.com/datasets/blastchar/telco-customer-churn  
 
 ---
 
 ## Project Structure
 
-movie-recommendation-system/
+customer-churn-prediction/
 
-app.py
-
-train_model.py
-
-movie_list.pkl
-
-similarity.pkl
-
-README.md
-
-data/movies.csv
+app.py  
+train_model.py  
+model.pkl  
+columns.pkl  
+README.md  
+data/Telco_customer_churn.xlsx  
 
 ---
 
 ## Run Project
 
-Install dependencies:
+Install dependencies and run commands:
 
 ```bash
-uv sync
-```
-
-Create model:
-
-```bash
+uv add pandas scikit-learn xgboost streamlit joblib openpyxl
 uv run python train_model.py
-```
-
-Run app:
-
-```bash
 uv run streamlit run app.py
-```
-
----
-
-## Future Improvements
-
-- Movie Posters
-- Search Feature
-- User Ratings
-- Collaborative Filtering
