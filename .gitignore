@@ -1,0 +1,13 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+similarity.pkl
+movie_list.pkl
+
+# Virtual environments
+.venv
